@@ -11,8 +11,8 @@
 - (직접 작성) 예: 이미지와 컨테이너의 차이, 볼륨 마운트, 포트 매핑과 NAT, SSH 키 인증
 
 ## 확인 결과
-- Windows 컨테이너 `uname -m`: 
-- Mac 컨테이너 `uname -m`: 
+- Windows 컨테이너 `uname -m`: x86_64
+- Mac 컨테이너 `uname -m`: aarch64
 - 컨테이너 IP (`ip addr`): 
 
 ## 겪은 문제와 해결
