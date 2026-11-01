@@ -1,0 +1,18 @@
+services:
+  dev:
+    build: .
+    container_name: chat-dev
+    # 내 컴퓨터의 프로젝트 폴더(./)를 컨테이너의 /workspace에 연결
+    # → 코드는 내 컴퓨터(VS Code 등)에서 편집, 컴파일/실행은 컨테이너에서
+    volumes:
+      - ./:/workspace
+    # 포트 매핑 "호스트포트:컨테이너포트"
+    # → 내 컴퓨터의 9000번으로 들어온 연결을 컨테이너의 9000번으로 전달
+    ports:
+      - "9000:9000"
+    # tcpdump로 패킷을 캡처하려면 필요한 권한
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    # 컨테이너를 계속 켜 두기 (터미널 여러 개로 접속해서 서버/클라이언트를 따로 띄우기 위함)
+    command: sleep infinity

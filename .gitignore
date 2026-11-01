@@ -1,0 +1,13 @@
+# 빌드 결과물 (소스만 올리고, 실행 파일은 각자 빌드)
+*.o
+*.out
+bin/
+build/
+
+# 패킷 캡처 파일 (필요한 것만 골라서 docs/에 따로 올리기)
+*.pcap
+
+# OS / 에디터가 만드는 파일
+.DS_Store
+Thumbs.db
+.vscode/
