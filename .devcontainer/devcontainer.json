@@ -1,0 +1,23 @@
+{
+  // VS Code에 표시될 이름
+  "name": "chat-server",
+
+  // 이미 있는 compose.yaml을 그대로 사용
+  "dockerComposeFile": ["../compose.yaml"],
+  // compose.yaml의 services 중 어떤 서비스에 VS Code를 연결할지
+  "service": "dev",
+  // VS Code가 컨테이너 안에서 열 폴더
+  "workspaceFolder": "/workspace",
+
+  // VS Code 창을 닫아도 컨테이너는 계속 켜 두기
+  "shutdownAction": "none",
+
+  "customizations": {
+    "vscode": {
+      // 컨테이너 안 VS Code에 자동 설치할 확장
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}
